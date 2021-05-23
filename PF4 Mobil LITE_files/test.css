@@ -1,0 +1,130 @@
+.meniu_footer ul{
+    justify-content: space-between;
+}
+
+#meniu_icon_portofoliu{
+    background-image: url(img/meniu_icon_portofoliu2-blue.svg);
+}
+
+.pretSimbol {
+    background-size: 12px 12px;
+    background-position: 6px center;
+    background-repeat: no-repeat;
+    padding: 0 8px 0 22px;
+    border-radius: 20px;
+}
+
+.pretSimbol.modifpoz {
+    background-image: url(img/modifpoz.svg);
+    background-color: #00c805;    
+    color: #fff !important;
+}
+
+.pretSimbol.modifneg {
+    background-image: url(img/modifneg.svg);
+    background-color: #f35530;
+    color: #fff !important;
+}
+
+.varSimbol {
+    background-size: 8px 8px;
+    background-position: 6px center;
+    background-repeat: no-repeat;
+    padding: 0 8px 0 22px;
+    border-radius: 20px;
+}
+
+.varSimbol.modifpoz {
+    background-image: url(img/modifpoz-green.svg);
+}
+
+.varSimbol.modifneg {
+    background-image: url(img/modifneg-red.svg);
+}
+
+.ba_bid, .ba_ask {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.ba_bid span,
+.ba_ask span {
+    height: 30px;
+    display: inline-block;
+    padding: 6px 4px;
+    margin: 0 !important;
+}
+
+.ba_bid span:first-child {
+    width: 42px;
+    border-right: 1px solid #fff;
+    padding-left: 8px;
+}
+
+.ba_bid span:last-child {
+    flex: 1;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-left: 8px;
+    text-align: left;
+}
+
+.ba_ask span:last-child {
+    width: 40px;
+    border-left: 1px solid #fff;
+    padding-right: 8px;
+    text-align: right;
+}
+
+.ba_ask span:first-child {
+    flex: 1;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.ba_bid .modifpoz,
+.ba_ask .modifpoz {
+    background-color: #00c805;  
+    color: #fff !important;
+}
+
+.ba_bid .modifneg,
+.ba_ask .modifneg {
+    background-color: #f35530;  
+    color: #fff !important;
+}
+
+.ba_bid .modifpoz:after,
+.ba_bid .modifneg:after {
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.ba_ask .modifpoz:before,
+.ba_ask .modifneg:before {
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.ba_bid .modifpoz:after,
+.ba_ask .modifpoz:before {
+    background-image: url(img/modifpoz.svg);
+}
+
+.ba_bid .modifneg:after,
+.ba_ask .modifneg:before {
+    background-image: url(img/modifneg.svg);
+}

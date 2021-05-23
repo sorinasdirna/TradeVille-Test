@@ -1,0 +1,1076 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>PF4 Mobil LITE</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">            
+    
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="./PF4 Mobil LITE_files/css2" rel="stylesheet">
+    <!--fonts-->
+
+    <!--Specifice mobilite-->    
+    <link rel="stylesheet" href="./PF4 Mobil LITE_files/stildefault.css">
+    <link rel="stylesheet" href="./PF4 Mobil LITE_files/GlobalStyle.css">
+    <link href="./PF4 Mobil LITE_files/css2(1)" rel="stylesheet">  
+    <link href="./PF4 Mobil LITE_files/test.css" rel="stylesheet">    
+    <script type="text/javascript" src="./PF4 Mobil LITE_files/jquery-3.5.1.min.js.download"></script>
+<style> 
+    .stare_ordin_A {    
+        color:#f35530 !important
+    }
+ 
+    /* de facut doar pt pg asta*/
+    .MBLTableRow_data{ 
+        margin:0;
+        display:block;
+    }
+ 
+    .divpoza{position: absolute; height:100%; width:80%; display:none;}
+
+    .mestdv a, .mescli a{
+        color:black;
+        overflow-x: hidden; 
+        overflow-y: scroll;
+        width:fit-content;
+        word-break: break-word;
+    }
+    .orames{
+        content:'Ora PM';
+        color: #757678;
+        font-weight: 300;
+        font-size: smaller; 
+        margin-top:20px;
+    }
+    .mesajechat{
+        position: fixed;
+        bottom:50px; 
+        top: 0px;
+        max-width:100%;
+        padding: 0 20px;
+        margin: auto;
+        overflow-x: hidden; 
+        overflow-y: scroll; 
+        }
+    .mescli{
+        float:right; 
+        clear:both; 
+        max-width:80%;
+        border:2px solid #dfe5e9;
+        border-radius:25px;
+        padding:10px 20px;
+        overflow-x: hidden; 
+        overflow-y: scroll;
+        margin-top:15px !important;
+    }
+    .mestdv{
+        float:left; 
+        clear:both; 
+        max-width:80%;
+        background:#f6f7f7;
+        border-radius:25px 25px 25px 0;
+        padding:20px 20px;
+        margin-top:6px !important;
+    }
+    .text{
+        margin-bottom:20px;
+    }
+    .scriechat{
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        height: 65px;
+        background: white;
+        bottom: 45px;
+        position: fixed;
+        z-index: 300;
+        box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.1);
+    }
+    textarea{
+        height: 40px;
+        border-radius:45px;
+        padding: 10px 30px 5px 30px;
+        font-weight: 500;
+        width:60%;
+      /*  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); */
+        overflow-x: hidden; 
+        overflow-y: scroll;
+    }
+    #txtMessage:focus{
+        outline:none;
+    }
+    .helpbutton{
+        background:url('img/send.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        width:32px;
+        height:32px;
+        border: 0;
+        margin-left: 5px;
+    }
+    .scrieta{
+        width: 72%;
+    }
+    .urcafis{
+        background:url('img/plus.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        width: 32px;
+        height: 32px;
+        }
+    .PaginaIndividuala{
+        padding: 3px 0 !important;
+    }
+    /* afisare desktop */
+    @media (min-width: 480px){
+        .scriechat{
+            bottom: 45px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            width: 440px;
+            margin: auto;
+            max-width: 100%;
+            z-index: 10000;
+        }
+        .mesajechat{
+            bottom: 50px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            width: 440px;
+            margin: auto;
+            max-width: 100%;
+            z-index: 5000;
+        }
+    }
+ 
+
+ 
+/* linie titlu adancime piata */
+.MBLTableTitle.pglevel2{
+    line-height: 28px; /* line-height de aici trebuie sa coincida cu line height de la .Lista_container.pglevel2*/
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+.Lista_container.pglevel2{
+    line-height: 28px; /* line-height de aici trebuie sa coincida cu line height de la .MBLTableTitle.pglevel2 */
+    outline: none;
+    border:none;
+    background:none;
+    text-align:right;
+    margin-left: auto;
+    padding-right: 0;
+    margin-right: 0;
+    cursor: pointer;
+}
+.Lista_container.pglevel2:focus{
+    outline: none;
+}
+.MBLTableHeader.pglevel2{
+    margin-bottom: -20px;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+/* linie titlu adancime piata */
+
+/* tabel ad (adancime piata) */
+.adancime.subpag .ap-titlu td{
+    background:none;
+    color:black;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.adancime.subpag .ap-date td:nth-child(2){
+    text-align: center;
+    padding-right: 11px;
+}
+.adancime.subpag .ap-titlu td:nth-child(2){
+    padding-left: 15px;
+    text-align: center;
+}
+.adancime.subpag .ap-titlu td:nth-child(3){
+    text-align: center;
+}
+.adancime.subpag .ap-titlu td:nth-child(1), .ap-date td:nth-child(1){
+    padding-left: 0;
+    text-align: left;
+}
+.adancime.subpag .ap-date td:nth-child(3){
+    border-left:1px dotted #757678;
+    text-align: left !important;
+}
+.adancime.subpag .level2{
+    width: 100% !important;
+    max-width: 100% !important;
+    padding:0 !important;
+    margin: auto;
+}
+
+
+/* tabel adancime piata pagina separata*/
+.level2 thead td{
+    background: none;
+    color:black;
+    font-weight: bold;
+    text-transform: capitalize;
+    border:none;
+}
+
+
+ 
+    .edit{
+        background:#00c805;
+        height:30px;
+        width:30px;
+        border:none;
+        outline:none;
+        border-radius:30px;
+        left: 25px;
+        display: block;
+        margin: auto;
+        position: relative;
+        top: -40px;
+    }
+    .creeaza{
+        font-weight: 700;
+        font-size: 20px;
+        margin-top:10px;
+    }
+    .derefacut{
+        background-color: white;
+        height: 55vh;
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .camp_de_completat{
+        bottom: -100px;
+        position: relative;
+        height: 40px;
+        width: 80%;
+        font-size: 20;
+        display:block;
+        margin:auto;
+        border:1px solid #e6ebea;
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-size:14px;
+        top: -20px;
+    }
+    .camp_de_completat:focus, .butonsubmit:focus{
+        outline:none;
+    }
+
+    .butonsubmit{        
+        width: 80%;
+        background:#e4e9ed;    
+        padding:15px 20px;
+        color:white;
+        background:#00c805;
+        font-weight: 700;
+        border:none;
+        outline: none;
+        border-radius: 60px;
+        position:relative;
+        margin:auto;
+        text-align: center;
+    }
+
+    .lista_format{
+       font-size:24px;
+       font-weight:800;
+       text-align: center;
+    }
+    .Lista_dropdown{
+       padding:3px;
+       text-align:center;
+       margin:0 auto;
+    }
+    .Lista_dropdown img{
+        width:40px;
+        margin:0 auto;
+        display:block;
+    }
+    .Lista_header{
+     display:flex;
+     width:100%;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   .Lista_header_stg{
+     height: fit-content;
+     object-fit: fill;
+     display: block;
+     flex-direction: column;
+     margin-right:3%;
+     background-color:#d7e5da;
+     border-radius:5px;
+     padding-top: 8%;
+     width: 100px;
+     height: 90px;
+   }
+   .Lista_header_stg img{
+     width:50px;
+     height:auto;
+     display:block;
+     margin:auto;
+     text-align: center;
+   }
+   .Lista_header_dr{
+     height:auto;
+     width:77%;
+   }
+   @media (min-width: 480px){
+    .derefacut{
+        bottom: 30%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 440px;
+        margin: auto;
+        max-width: 100%;
+        z-index: 10000;
+    }
+   }
+ 
+  .lista_myaccount li{
+    margin-top:30px;
+  }
+  .lista_myaccount li::after{
+      width: 100%;
+      display:block;
+      clear:both;
+      background:#e7e7e7;
+      content: '';
+      height: 1px;
+      margin: 30px 0 10px 0;
+      float:none;
+
+  }
+  .container_myaccount {
+    width:100%;
+    padding: 0 20px;
+    margin: auto
+  }
+
+  .container_myaccount::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .cod_simbol.myaccount{
+      margin-top: 7px;
+      margin-bottom: 10px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+      color:black;
+      float: none;
+      display: block;
+  }
+  .lista_myaccount .subtitlu.text_gri{
+      font-size: 14px;
+  }
+  .subtitlu{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: -0.24px;
+      margin-top:24px;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+  .text_gri{
+      color: #757678;
+      font-weight: 300;
+  }
+
+ 
+/* icon sterge simbol*/
+.x-icon{
+  width:30px;
+  height: 30px;
+}
+ 
+.ordin_nou_lista.plmare li{
+    margin-bottom: 40px;
+    height:20px;
+    margin-top: 30px;
+    
+  }
+  .ordin_nou_lista.plmare li .nr.MBLTableRow_data.denomundefined.denomRON{
+    margin-top:7px !important;
+  }
+  .ordin_nou_lista.plmare li:first-child{
+    margin-top: 0px;
+  }
+  .ordin_nou_lista.plmare li:nth-child(even){
+    margin-bottom: -30px;
+  }
+  input.modificari {
+    background-color: transparent;
+    padding: 0px;
+    border: initial;
+    font: inherit;
+    margin: 0px;
+}
+
+ 
+      .ordin_nou_lista.plmare li{
+        margin-bottom: 40px;
+        height:20px;
+        margin-top: 30px;
+        
+      }
+      .ordin_nou_lista.plmare li .nr.MBLTableRow_data.denomundefined.denomRON{
+        margin-top:7px !important;
+      }
+      .ordin_nou_lista.plmare li:first-child{
+        margin-top: 0px;
+      }
+      .ordin_nou_lista.plmare li:nth-child(even){
+        margin-bottom: -30px;
+      }
+
+
+
+/* drop down stanga */ 
+.select-css {
+  display: block;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url(img/drop-down-arrow.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: right .12em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+display: none;
+border:none;
+}
+/* Hover style */
+.select-css option:hover{
+color:#00c805;
+}
+/* Focus style */
+.select-css:focus {
+outline: none;
+border:none;
+}
+  
+    .tintacot{ float:right;} 
+
+    .MBLTableRow li:nth-child(2){
+        text-align: left;
+    }
+    .ba_linie{        
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 45px;
+        width: 400px;
+        margin: auto;
+        max-width: 100%;
+        z-index: 5;
+        height: 60px;
+        padding: 20px 30px;
+        text-align: center;
+        background: #fff;
+    }
+    .ba_bid{
+        background: #f35530;
+        color: white !important;
+        border-radius: 20px;
+        /* padding: 6px 12px 0px; */
+        font-weight: 700;
+        /* height: 30px; */
+        left: 20px !important;    
+        width: 125px;
+        text-align: center;
+        position: absolute;
+    }
+
+    .ba_ask{
+        background: #00c805;
+        color: white !important;
+        border-radius: 20px;
+        /* padding: 6px 12px 0px; */
+        font-weight: 700;
+        /* height: 30px; */
+        right: 20px !important;
+        width: 125px;
+        text-align: center;
+        position: absolute;     
+    }
+    .ba_bid, .ba_ask{
+    /* justify-content: space-evenly; 
+    text-align: center; */
+    }
+    .ba_ask{
+        margin-right: 0;
+    }    
+    
+    .numeSimbol{
+        font-weight:bold;
+        font-size: 20px;
+        color:black;
+        display: block;
+        width: 90%;
+        text-transform: capitalize;
+    }
+    .pretSimbol{
+        font-weight:bold;
+        font-size: 20px;
+        color:black;
+        display: block;
+        width: fit-content;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .varSimbol{
+        font-weight:bold;
+    }
+    .randSimbol{
+        font-weight:bold;
+    }
+    .randSimbol::before{
+        content:"( ";
+    }
+    .randSimbol::after{
+        content:"% ) ";
+    }
+    
+    .perRandSimbol{
+        margin-left: 5px;
+        font-size: 14px;
+        line-height: 18px;
+        color: black;
+        font-weight: bold;
+    }
+ 
+
+  .SymbolSearchListStatusIcon{
+    width:25px;
+    float:right;
+    display:block;
+    float:right;
+    margin-top: 10px;
+  }
+ 
+  .Transfer_container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    padding:0px 20px;
+  }
+
+  .Transfer_container_stg {
+    height: fit-content;
+    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    margin-right: 3%;
+  }
+
+  .Transfer_container_dr {
+    align-self: center;
+    align-items: stretch;
+    height: auto;
+    width: 80%;
+  }
+ 
+  .PaginaIndividuala.chestie{
+    height:100%;
+  }
+
+  .simbol_currency{
+    font-size:32px;
+    line-height:36px;
+    font-weight: 500;
+  }
+  .transfer_nou input{
+    font-size:32px;
+    line-height:36px;
+    font-weight: 500;
+  }
+  
+  .transfer_nou_buton{
+    padding:20px 30px;
+    color: #00c805;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    background: none;
+    line-height: 18px;
+    float:left;
+    border:2px solid #f6f6f6;
+  }
+  .question{
+    border:2px solid #00c805;
+    color: #00c805;
+    line-height: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius:40px;
+    font-weight: 700;
+    font-size:16px;
+    margin: 0 auto;
+    text-align: center;
+    padding-right: 2px;
+    padding-top: 0px;
+  }
+ 
+    .MBLTableHeader.ut{
+        margin-top:20px;
+        margin-bottom: -20px;
+        background: none;
+        font-weight: bold !important;
+    }
+    .ap-titlu.ut td{
+        background: none;
+        color:black;
+    }
+    .ap-titlu.ut td:nth-child(1), .ap-date.ut td:nth-child(1){
+       width:96px;
+       text-align:left;
+    }
+    .ap-titlu.ut td:nth-child(2) {
+       width:82.4px;
+       padding-right: 25px;
+    }
+    .ap-date.ut td:nth-child(2){
+        text-align:right;
+        padding-right: 25px;
+    }
+    .ap-titlu.ut td:nth-child(4), .ap-date.ut tdtd:nth-child(4){
+        text-align: right;
+    }
+    .ap-date.ut td:nth-child(3) {
+    text-align: center;
+    }
+</style></head>
+<body>
+    <!-- Fixed Menu >> Bara header-->
+        <div class="meniu_container farasubtitlu" id="fixed_meniu_header">
+            <div class="meniu_header">
+                <ul>
+                    <li>
+                        <div id="meniu_back_arrow" class="meniu_back_arrow hidden" onclick="navi.back()" style="display: block;">
+                            <div>
+                                <img src="./PF4 Mobil LITE_files/meniu_arrow_back.svg" class="arrow nu-ir">
+                                <img src="./PF4 Mobil LITE_files/meniu_arrow_back-ir.svg" class="arrow da-ir">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                            <h1 id="meniu_titlu_pagina">US.AMZN</h1>
+                            <h5 id="meniu_subtitlu_pagina">loading...</h5>
+                    </li>
+                    <li>
+                        <div class="meniu_checkmark hidden">
+                            <a href="https://mbl.tradeville.eu/mobilite/mobilite.htm">
+                                <img src="./PF4 Mobil LITE_files/meniu_checkmark.svg">
+                            </a>
+                        </div>
+                    </li>
+                    <li id="meniu_OK" class="meniu_OK hidden" style="display: none;">
+                        <span style="font-size: 20px !important;font-weight: 700!important;">
+                            OK
+                        </span>
+                    </li>                       
+                    <li id="meniu_addsymbol" class="meniu_addsymbol hidden" style="display: none;">
+                        <span>
+                            <img src="./PF4 Mobil LITE_files/meniu_plus_negru.svg" class="plus nu-ir">
+                            <img src="./PF4 Mobil LITE_files/meniu_plus_negru-ir.svg" class="plus da-ir" style="margin-bottom: 3px;">
+                        </span>
+                    </li>                 
+                    <li>
+                        <div id="meniu_context_menu" class="meniu_context_menu" style="display: none;">
+                            <div class="meniu_context_menu_point"></div>
+                            <div class="meniu_context_menu_point"></div>
+                            <div class="meniu_context_menu_point"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!-- Fixed Menu >> Bara header-->
+        
+    <!--Content-->
+    <div id="ContainerPagini">        
+    <div id="pg7425123094" class="PaginaIndividuala chestie" pagina="simbol"><div detaliipagina="da" class="ascuns" titlu="Simbol" subtitlu="false" secondpage="true" contextmenu="false"></div>
+<!-- modif=simbol-->
+<div modif="simbol" style="padding-bottom:80px;" cussubs="1" comanda="simbol" id="x7427366516"><div class="eroare"></div>
+    <div class="MblTable_Container">
+        <span gi="nume" class="numeSimbol">Amazon Com Inc</span>
+        <span id=PRET gi="pret" class="pretSimbol" title="">3191.86</span>
+        <span id=VABS gi="vabs" nrzec="4" nevero="nvr_" class="varSimbol denomUSD nvr_V" clase="denom+valuta" title="">30.25</span>
+        <span id=CREST gi="crest" nrzec="2" nevero="nvr_" class="randSimbol nvr_V">0.97</span>        
+        <span gi="tipcot" lz="simbol" style="float: right;">Cotatii intarziate</span>
+        <span class="perRandSimbol"></span>
+        <span class="chartDate"></span>
+    </div>
+    <div idm="grafic_simbol" class="graficInline grafic"><div class="tv-lightweight-charts" style="overflow: hidden; width: 375px; height: 244px;"><table cellspacing="0" style="height: 244px; width: 375px;"><tr><td style="padding: 0px;"></td><td style="padding: 0px; position: relative; width: 319px; height: 218px;"><div style="width: 100%; height: 100%; position: relative; overflow: hidden;"><canvas width="957" height="654" style="user-select: none; -webkit-tap-highlight-color: transparent; width: 319px; height: 218px; position: absolute; z-index: 1; left: 0px; top: 0px;"></canvas><canvas width="957" height="654" style="user-select: none; -webkit-tap-highlight-color: transparent; width: 319px; height: 218px; position: absolute; z-index: 2; left: 0px; top: 0px;"></canvas></div></td><td style="padding: 0px;"><div style="height: 218px; overflow: hidden; width: 56px; left: 0px; position: relative; min-width: 56px;"><canvas width="168" height="654" style="user-select: none; -webkit-tap-highlight-color: transparent; width: 56px; height: 218px; position: absolute; z-index: 1; left: 0px; top: 0px;"></canvas><canvas width="168" height="654" style="user-select: none; -webkit-tap-highlight-color: transparent; width: 56px; height: 218px; position: absolute; z-index: 2; left: 0px; top: 0px;"></canvas></div></td></tr><tr><td style="padding: 0px;"></td><td style="height: 26px; padding: 0px; width: 319px;"><div style="width: 100%; height: 100%; position: relative; overflow: hidden;"><canvas width="957" height="78" style="user-select: none; -webkit-tap-highlight-color: transparent; width: 319px; height: 26px; position: absolute; z-index: 1; left: 0px; top: 0px;"></canvas><canvas width="957" height="78" style="user-select: none; -webkit-tap-highlight-color: transparent; width: 319px; height: 26px; position: absolute; z-index: 2; left: 0px; top: 0px;"></canvas></div></td><td style="padding: 0px;"><div style="width: 56px; height: 26px; overflow: hidden; min-width: 56px;"><canvas width="168" height="78" style="user-select: none; -webkit-tap-highlight-color: transparent; width: 56px; height: 26px;"></canvas></div></td></tr></table></div></div>
+
+    <div class="MblTable_Container">       
+        <!-- Optiuni TF Grafic -->
+        <ul class="grafic_optiuni_tf">
+            <li idm="grafic_optiuni_tf_1D">1D</li>
+            <li idm="grafic_optiuni_tf_1W" class="grafic_optiunetf_activa">1W</li>
+            <li idm="grafic_optiuni_tf_1M">1M</li>
+            <li idm="grafic_optiuni_tf_3M">3M</li>
+            <li idm="grafic_optiuni_tf_1Y">1Y</li>
+            <li idm="grafic_optiuni_tf_5Y">5Y</li>
+        </ul>
+        <div class="linie" style="width:100%; margin:20px 0 10px;"></div>
+        <!-- Optiuni TF Grafic -->
+
+        <!-- zona BID ASK -->
+        <div idm="BidAskContainer" class="ba_linie">
+                <div class="ba_bid" onclick="ordin_nou(this)">
+                    <span style="font-weight: 700;margin-right:6px;">BID</span>
+                    <span id=BID gi="bid" style="font-weight: 700;" class="nr modifpoz">3192.00</span>
+                </div>
+
+                <div class="ba_ask" onclick="ordin_nou(this)">
+                    <span id=ASK gi="ask" style="font-weight: 700;margin-right:6px;" class="nr">3223.95</span>
+                    <span style="font-weight: 700;">ASK</span>
+                </div>
+        </div>
+        <!-- zona BID ASK -->
+
+        <div class="MBLTableHeader">
+            <div idm="PortofTitle" class="MBLTableTitle">Indicatori</div>
+        </div>
+
+        <!-- macheta date simbol -->
+        <ul class="MBLTable">
+            <li>
+                <ul class="MBLTableRow pgsimbol">
+                    <li class="MBLTableRow_PrimaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Referinta</span>
+                        <p class="MBLTableRow_data" gi="ref" title="">3,161.47</p>                  
+                    </li>
+                    <li class="MBLTableRow_SecondaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri" lz="volum">Volum</span>
+                        <p class="MBLTableRow_data" gi="volz" title="">0</p>    
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="MBLTableRow">
+                    <li class="MBLTableRow_PrimaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Maximul de azi</span>
+                        <p class="MBLTableRow_data" gi="maxazi">3,199.57</p>                  
+                    </li>
+                    <li class="MBLTableRow_SecondaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Volum Mediu</span>
+                        <p class="MBLTableRow_data" gi="volum1d">1</p>    
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="MBLTableRow">
+                    <li class="MBLTableRow_PrimaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Minimul de azi</span>
+                        <p class="MBLTableRow_data" gi="minazi">3,147.88</p>                  
+                    </li>
+                    <li class="MBLTableRow_SecondaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Capitalizare</span>
+                        <p class="MBLTableRow_data" gi="capitalizare">15,988.33M</p>    
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="MBLTableRow">
+                    <li class="MBLTableRow_PrimaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Maxim 52 sapt</span>
+                        <p class="MBLTableRow_data" gi="max52">3,482.02</p>                  
+                    </li>
+                    <li class="MBLTableRow_SecondaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Indice P/E</span>
+                        <p class="MBLTableRow_data" gi="PER" nrzec="2">88.33</p>    
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="MBLTableRow">
+                    <li class="MBLTableRow_PrimaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Minim 52 sapt</span>
+                        <p class="MBLTableRow_data" gi="min52">0</p>                  
+                    </li>
+                    <li class="MBLTableRow_SecondaryData" style="width: 50%">
+                        <span class="MBLTableRow_subtitle text_gri">Ultimul dividend</span>
+                        <p class="MBLTableRow_data" gi="ultDvd">-</p>    
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- modif=simbol-->
+
+<div class="MblTable_Container">       
+    <div class="adancime subpag"></div>
+    <div class="utranzp subpag" cussubs="1" comanda="utranzp" id="x7427580039"><div class="eroare"></div><div class="MBLTableHeader ut">
+    <span class="MBLTableTitle pglevel2">
+        Ultimele tranzactii
+    </span>
+</div>   
+
+<table modif="utranzp">
+        <thead class="ap-titlu ut">
+            <tr>
+                <td style="font-weight: bold;text-transform: capitalize;width: 82.4px;" lz="data">data</td>
+                <td class="nr" style="font-weight: bold;text-transform: capitalize;width: 87.2px;" lz="volum">Volum</td>
+                <td class="nr" style="font-weight: bold;text-transform: capitalize;text-align: center;width: 74.4px;" lz="pret">pret</td>
+                <td style="font-weight: bold;text-transform: capitalize;">din</td>
+            </tr>
+        </thead>
+        
+        <tbody maxrows="7" class="ap-date ut">
+            <tr class="" repetat="US.AMZN">
+                <td nrzec="zs" gi="data" style="width: 82.4px;">15:31:56</td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;">3,191.86</td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr><tr class="" repetat="US.AMZN">
+                <td nrzec="zs" gi="data" style="width: 82.4px;">15:29:46</td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;">3,192.64</td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr><tr class="" repetat="US.AMZN">
+                <td nrzec="zs" gi="data" style="width: 82.4px;">15:26:10</td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;">3,191.07</td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr><tr class="" repetat="US.AMZN">
+                <td nrzec="zs" gi="data" style="width: 82.4px;">15:20:27</td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;">3191</td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr><tr class="" repetat="US.AMZN">
+                <td nrzec="zs" gi="data" style="width: 82.4px;">15:20:11</td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;">3191</td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr><tr class="" repetat="US.AMZN">
+                <td nrzec="zs" gi="data" style="width: 82.4px;">15:17:37</td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;">3,190.49</td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr><tr class="" repetat="US.AMZN">
+                <td nrzec="zs" gi="data" style="width: 82.4px;">15:05:16</td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;">3,190.59</td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr><tr class="derepetat">
+                <td nrzec="zs" gi="data" style="width: 82.4px;"></td>
+                <td class="nr" gi="volum" style="width: 87.2px;"></td>
+                <td class="nr" gi="pret" style="border-left: 1px dotted #757678;"></td>
+                <td class="nr" clase="din|&gt;|nvr_V|&lt;|nvr_R" gi="din"></td>
+            </tr>        
+        </tbody>
+</table>
+
+</div>
+</div>
+
+
+<div class="gol_jos" style="margin-bottom: 120px;"></div>
+
+
+
+
+</div></div>
+
+
+    <!-- Dialog confirmare-->
+    <div id="DialogConf" class="MenuWithOverlay" style="display:none;">
+        <div class="dialog_confirmare">
+            <div id="DialogConfTitle" class="MBLTableTitle" style="margin:0px auto 20px;display:block;width:100%;">
+                Dialog confirmare
+            </div>
+            <div id="DialogConfText" class="dialog_confirmare_subt">
+                Extended-Hours Trading may involve additional risks like decreased shares availability and incresead price
+                volatility, and may not be appropiate for all investors. 
+            </div>
+            <a id="DialogConfLink" class="dialog_confirmare_btn">
+                Learn more
+            </a>
+
+            <input id="DialogConfTextInput" class="dialog_confirmare_input" type="text" placeholder="Scrie text aici..." style="display:block;">
+
+            <button id="DialogConfOK" class="continua">
+                Continua
+            </button>
+            <button id="DialogConfCancel" class="dialog_confirmare_btn" style="text-decoration: none;font-weight: 700;" onclick="$(&#39;#DialogConf&#39;).hide()">
+                Anuleaza
+            </button>
+        </div>
+    </div>
+    <!-- Dialog confirmare-->
+    
+    <!-- Meniuri Specifice paginilor -->
+    <div idm="SelectedAccMenu" class="MenuWithOverlay" style="display:none" onclick="ChangeSelectedAcc(event)">
+        <div class="lista_overlay">
+          <span class="MBLTableTitle">Meniu Detineri</span>
+          <ul>
+            <li class="derepetat">
+              <span gi="nume"></span>
+              <div vizibil="selectat" class="check_verde"></div>
+              <div class="linie"></div>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <div id="MeniuDateListe" idm="StockMktDataMenu" class="MenuWithOverlay" style="display:none" onclick="ChangeInfo_StockMktData(event)">
+        <div class="lista_overlay">
+            <span class="MBLTableTitle">Meniu Detineri</span>
+            <ul>
+                <li>
+                    <span gi="pret" idm="StockMktDataMenu_opt">Ultimul pret</span>   
+                    <div class="linie"></div>
+                </li>
+                <li>
+                    <span gi="crest" idm="StockMktDataMenu_opt">Variatie procentuala</span>
+                    <div idm="StockMktDataMenu_selectedOpt" class="check_verde"></div>
+                    <div class="linie"></div>
+                </li>
+            </ul>
+        </div> 
+    </div>
+    
+    <div id="MeniuDatePortof" idm="StockMktDataMenu" class="MenuWithOverlay" style="display:none" onclick="ChangeInfo_StockMktData(event)">
+        <div class="lista_overlay">
+          <span class="MBLTableTitle">Meniu Detineri</span>
+          <ul>
+              <li>
+                <span gi="ppiata" idm="StockMktDataMenu_opt">Ultimul pret</span>   
+                <div class="linie"></div>
+              </li>
+              <li>
+                <span gi="eval" idm="StockMktDataMenu_opt">Evaluare detinere</span>  
+                <div class="linie"></div>  
+              </li>
+              <li>
+                <span gi="crest" idm="StockMktDataMenu_opt">Variatie procentuala</span>
+                <div idm="StockMktDataMenu_selectedOpt" class="check_verde"></div>
+                <div class="linie"></div>
+              </li>
+              <li>
+                <span gi="profit" idm="StockMktDataMenu_opt">Total profit/pierdere</span>              
+                <div class="linie"></div>
+              </li>
+              <li>
+                <span gi="varcost" idm="StockMktDataMenu_opt">Total variatie procentuala</span>  
+              <div class="linie"></div>
+              </li>
+          </ul>
+        </div> 
+    </div>    
+    <!-- Meniuri Portof si Lista -->
+
+
+    <!-- Fixed Menu >> Bara footer-->
+    <div class="meniu_container meniu_footer" id="fixed_meniu_footer">
+            <ul>
+                <li id="meniu_liste">
+                    <div id="meniu_icon_liste" class="meniu_icons_jos"></div>                    
+                </li>
+                <li id="meniu_portofoliu">
+                    <div id="meniu_icon_portofoliu" class="meniu_icons_jos"></div>
+                </li>
+                <li id="meniu_search">
+                    <div id="meniu_icon_search" class="meniu_icons_jos"></div>
+                </li>
+                <li id="meniu_chat">
+                    <div id="meniu_icon_chat" class="meniu_icons_jos"></div>
+                </li>
+                <li id="meniu_myaccount">
+                    <div id="meniu_icon_myaccount" class="meniu_icons_jos"></div>
+                </li>
+            </ul>
+    </div>
+    <!-- END Fixed Menu >> Bara footer-->
+    <!--END Fixed Menu-->    
+</body>
+<script>
+  function setlevel(lvl){
+    if(lvl==0){$('#PRET').text('0.4523');$('#VABS').text('0.0023'); $('#CREST').text('0.0'); $('#BID').text('0.4520'); $('#ASK').text('0.4570');}
+    if(lvl==1){$('#PRET').text('1.2500');$('#VABS').text('0.0500'); $('#CREST').text('0.5'); $('#BID').text('1.20'); $('#ASK').text('1.3500');}
+    if(lvl==2){$('#PRET').text('75.25');$('#VABS').text('3.50'); $('#CREST').text('0.25'); $('#BID').text('74.50'); $('#ASK').text('75.50');}
+    if(lvl==3){$('#PRET').text('305.50');$('#VABS').text('5.50'); $('#CREST').text('4.25'); $('#BID').text('299.25'); $('#ASK').text('301.00');}
+    if(lvl==4){$('#PRET').text('3222.50');$('#VABS').text('15.50'); $('#CREST').text('0.5'); $('#BID').text('3221.00'); $('#ASK').text('3225.50');}
+  }
+  function simuleazaCOT(){    
+    let pretL=$('#PRET').text().length;
+    //reset
+    $('#PRET').removeClass('modifneg').removeClass('modifpoz');
+    $('#VABS').removeClass('modifneg').removeClass('modifpoz');
+    $('#CREST').removeClass('modifneg').removeClass('modifpoz');
+    $('#BID').removeClass('modifneg').removeClass('modifpoz');
+    $('#ASK').removeClass('modifneg').removeClass('modifpoz');
+
+    let rndPret=Math.random(), rndBID=Math.random(), rndASK=Math.random();
+
+    //simuleaza variatie pret
+    let PretOld=parseFloat($('#PRET').text());
+    if(rndPret<0.33) {
+      $('#PRET').text((parseFloat($('#PRET').text())*(1-((rndBID>0.5)?0.01:0.005))).toString().substr(0,pretL));
+      $('#PRET').addClass('modifneg');
+      $('#VABS').addClass('modifneg');
+    }
+    if(rndPret>0.66) {
+      $('#PRET').text((parseFloat($('#PRET').text())*(1+((rndBID>0.5)?0.01:0.005))).toString().substr(0,pretL));
+      $('#PRET').addClass('modifpoz');
+      $('#VABS').addClass('modifpoz');
+    }
+    let PretNew=parseFloat($('#PRET').text());
+    $('#VABS').text((parseFloat($('#VABS').text())+(PretNew-PretOld)).toString().substr(0,pretL));
+    $('#CREST').text((100*parseFloat($('#VABS').text())/parseFloat($('#PRET').text())).toString().substr(0,4));
+
+    //simuleaza var bid/ask
+    if(rndBID<0.33) {
+      $('#BID').text((parseFloat($('#BID').text())*(1-((rndPret>0.5)?0.01:0.005))).toString().substr(0,pretL));
+      $('#BID').addClass('modifneg');
+    }
+    if(rndBID>0.66) {
+      $('#BID').text((parseFloat($('#BID').text())*(1+((rndPret>0.5)?0.01:0.005))).toString().substr(0,pretL));      
+      $('#BID').addClass('modifpoz');
+    }
+    if(rndASK<0.33) {
+      $('#ASK').text((parseFloat($('#ASK').text())*(1-((rndBID>0.5)?0.01:0.005))).toString().substr(0,pretL));
+      $('#ASK').addClass('modifneg');
+    }
+    if(rndASK>0.66) {
+      $('#ASK').text((parseFloat($('#ASK').text())*(1+((rndBID>0.5)?0.01:0.005))).toString().substr(0,pretL)); 
+      $('#ASK').addClass('modifpoz');
+    }    
+  }
+  setInterval(simuleazaCOT,2000);
+  //setlevel(4);
+</script>
+</html>

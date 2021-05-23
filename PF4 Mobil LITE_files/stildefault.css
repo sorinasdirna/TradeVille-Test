@@ -1,0 +1,244 @@
+*{font: 10pt Arial;}
+table {border-collapse: collapse;}
+/*td{border: solid 1px #bbb; padding: 1px; }*/
+.Xconectat{color: green;}
+.deconectat{font-size: larger; color: red; background-color: white;}
+.scmd{font: 12pt Arial; color: blue; padding: 5px; cursor: pointer;}
+.codpw{width:80px;}
+.msg{font: 9pt Arial;border-top: grey solid 1px; padding: 1px;}
+.eroare{color: red;}
+.atentie{color: darkorange;}
+.unc{ display:inline-block; padding:2px;}
+.derepetat{display: none;}
+/* .nr{text-align: right;} */
+.modifpoz {background-color:#b9f4c4; color: black !important;}
+.modifneg {background-color:#ffd3d6; color: black !important;}
+.modifnou {background-color:#F8F8D8;}
+.nvr_V {color:#00AA00;/*font-weight: bold;*/}
+.nvr_R {color:#AA0000;/*font-weight:bold;*/}
+.nvr_N {color:black;}
+.chestie{padding: 3px;}
+.cautsimbol {border: black 1px solid; max-width: 200px; max-height: 200px;
+    position: absolute; display: none; margin-left: 2px;
+    overflow-x: hidden; overflow-y: auto;
+    white-space: nowrap;  z-index: 8888; background-color: #F6F9E0;
+}
+.pestegrafic {position: absolute;top: 0px;left: 0px;touch-action: none;pointer-events: auto;}
+.graficparam{max-width: 220px; display: none; left: 11px; top:11px;padding: 3px;}
+.titlugrafic{font-size: larger; left: 11px; top:11px; padding: 3px;}
+.logopcli{background-color: cornsilk;}
+.logoptv{background-color: blanchedalmond;}
+.edeinchis{display: none;}
+.oinmbp{cursor: pointer; margin-left: 5px; background-color:rgb(229, 195, 170);min-width: 16px; display: inline-block;}
+.oinmbp1{cursor: pointer; background-color: rgb(229, 195, 170);min-width: 16px; display: inline-block;}
+.subpagX titlu{display:none;}
+.subpag{position:relative;}
+.subtitlu{margin-top: 5px;}
+.ilblock{display: inline-block;}
+.important{color: tomato;}
+.plmare{text-transform: capitalize;}
+.tlmari{text-transform:uppercase;}
+.grafic{position: relative; padding: 0px;}
+.chestie table{width:100%;max-width: 1000px;}
+.drsus{position:absolute; right:5px; top:5px;}
+menu2{
+  position:absolute; right:5px; top:5px;
+  border:teal 2px; background-color: thistle; z-index: 9999;
+  font-size: larger;
+}
+menu2 div{display:block; margin: 5px; padding: 3px;}
+.fixing{background-color: cornsilk;}
+.simclos{background-color: #f8f8f8;}
+.ascuns{display: none;}
+thead td {color: #DDEEDD;background: #111166;}
+.lksim{cursor: pointer; color: darkblue;}
+.lkceva{cursor: pointer; color: darkslateblue; min-width: 30px; min-height: 18px;line-height: 18px;}
+.maimic{font-size: smaller;}
+.mic{font-size: smaller;}
+
+.op_cump{background-color:#dfd;}
+.op_vanz{background-color:#fdd;}
+.op_in{background-color:#ede;}
+.op_out{background-color:#dee;}
+
+/*
+.asteaptasrv {font-size:larger;font-weight:bold;color:#660033; 
+  animation-name: clipeste; animation-duration: 0.5s; animation-iteration-count: infinite;
+  position:absolute; left:44px; top:30px;background-color:#ffffff;border-style:solid;border-width:2px;}
+@keyframes clipeste {
+0% {color: #660033;} 50% {color: orange;} 100% {color: #660033;}
+} */
+
+/* nou 
+
+.asteaptasrv {
+  z-index:10000 !important;
+  font-size:larger;
+  font-weight:bold;
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+ nou */
+
+/* test loader */
+
+.asteaptasrv{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / 85%);
+  cursor: pointer;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  max-width: 120%;
+  z-index: 8000000;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-align: center;
+}
+
+
+.asteaptasrv h1 {
+  z-index: 8000001;
+  margin:0;
+  margin-top: 25vh !important;
+  padding: 0;
+  font-weight: bold;
+  color: #81dc13;
+}
+
+.asteaptasrv h1 span {
+  font-size: 30px !important;
+  position: relative;
+  top: 0.63em;  
+  display: inline-block;
+  text-transform: uppercase;  
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+
+.let1 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.let2 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.3s;
+}
+
+.let3 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+
+.let4 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.5s;
+
+}
+
+.let5 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+.let6 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.7s;
+}
+
+.let7 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+.let8 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 1.9s;
+}
+
+.let9 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.let10 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 2.1s;
+}
+
+.let11 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 2.2s;
+}
+
+.let12 {
+  animation: drop 1.2s ease-in-out infinite;
+  animation-delay: 2.3s;
+}
+
+@keyframes drop {
+    10% {
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 1;
+        top: 3.78em;
+        transform: rotateX(-360deg);
+    }
+    80% {
+        opacity: 1;
+        top: 3.78em;
+        transform: rotateX(-360deg);
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        top: 6.94em
+    }
+}
+
+
+
+
+/* test loader */
+
+.confirma{position: fixed; border: darkred solid 1px;padding: 4px; z-index: 123456; background-color: white;}
+.tabactiv{text-decoration: underline;}
+.taburi[tinta]{cursor: pointer;}
+.orapana{color: darkorange;}
+.oradupa{color: darkgreen;}
+.nelipit{padding-left: 4px;}
+
+.grialb tr:nth-child(2n+1) {
+  /*background-color: #f0f0f0;*/
+  filter:saturate(1.2);
+}
+
+.modif2poz {background-color:#c9fad4;}
+.modif2neg {background-color:#ffe3e6;}
+.modif2nou {background-color:#FaFae8;}
+
+.sorted_asc{background-color:#262;}
+.sorted_desc{background-color:#622;}
+
+.mainoi{background-color:#d1fad9;}
+.maivechi{background-color:#d0e3e6;}

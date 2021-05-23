@@ -1,0 +1,808 @@
+/* CSS Default */
+/* make scrollbar transparent */
+html {
+    overflow:   scroll;
+  }
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; 
+  }
+/* make scrollbar transparent */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+}
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+    color: black;
+    font-weight: 300;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #fff;
+	font-weight: 700;
+}
+td{
+    min-height: 25px; padding: 2px;
+}
+/* END CSS Default */
+
+
+
+/****************** Meniu ******************/
+.meniu_container {
+    width:100%;
+	padding: 0 20px;
+}
+.meniu_container::after {
+	content: '';
+	display: block;
+    clear: both;
+}
+
+/* Bara header*/
+.meniu_back_arrow{
+    float:left;
+    margin-right:30px;
+    margin-left:5px;
+}
+.meniu_addsymbol{
+    width: 25px;
+    float: right;
+    position: absolute;
+    right: 60px;
+    bottom: 12px;
+}
+.meniu_addsymbol .plus-da-ir{
+    display:none;
+}
+.meniu_addsymbol .plus-nu-ir{
+    display:block;
+}
+.meniu_OK{
+    float: right;
+    color: red;
+    display: none;
+    margin: auto;
+}
+.meniu_checkmark img{
+    height:24px;
+}
+.meniu_checkmark{
+    float:right;
+    margin-top: -58px;
+}
+
+.meniu_back_arrow img{
+    height:24px;
+}
+.meniu_back_arrow a{
+    display:block;
+    width:100%;
+}
+
+.meniu_context_menu{
+    background: none;
+    z-index:300;
+    display: block;
+    float: right;
+    position: relative;
+}
+
+.meniu_context_menu_point{
+    background:black; /* old: #6f787e; */
+    width:5px;
+    height:5px;
+    border-radius: 60%;
+    margin-bottom:4px;
+}
+
+#fixed_meniu_header{
+    position: fixed;
+    top: 0;
+    height: 60px;
+    text-align: center;
+    background: #fff;
+    z-index: 3;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.meniu_header{
+    max-width: 350px;
+    height: 60px;
+    margin: auto;
+    padding-top: 20px;
+}
+.meniu_header ul li:nth-child(2){
+    float: left;
+    margin-top: -5px;
+    width: fit-content;
+}
+
+#meniu_subtitlu_pagina{
+    top: 22px;
+    position: relative;
+    color:#6f787e;
+    font-size: 12px;
+    margin: 0;  
+}
+#meniu_titlu_pagina{
+    position: absolute;
+    font-size: 20px;
+    margin:0;
+    font-weight: 500;
+}
+/* pentru cand am activa clasa ".farasubtitlu" - pagini fara subtitlu, de ex: portof*/
+.meniu_container.farasubtitlu #meniu_subtitlu_pagina{
+    display:none;
+}
+.meniu_container.farasubtitlu #meniu_titlu_pagina{
+    margin-top:5px;
+    font-weight: 500;
+}
+/* pentru cand am activa clasa ".farasubtitlu" - pagini fara subtitlu, de ex: portof*/
+/* END Bara header*/
+
+/* saptiu gol inainte de footer*/
+.gol_jos{
+    display: block;
+    width: 100%;
+    clear: both;
+    float: none;
+    margin-bottom: 90px;
+  }
+/* saptiu gol inainte de footer*/
+
+/* Bara footer*/
+.meniu_footer{
+    position: fixed;
+    bottom: 0;
+    height:60px;
+    padding:20px 30px;
+    text-align: center;
+    background: #fff;
+    z-index:3;
+    margin-bottom:0;
+    box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.1);
+
+}
+.meniu_footer ul{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: row;
+}
+.meniu_footer ul li{
+    width:100%;
+    width:24px;
+    height:24px;
+}
+.meniu_footer ul li:first-child, .meniu_footer ul li:nth-child(2), .meniu_footer ul li:nth-child(3), .meniu_footer ul li:nth-child(4){
+    margin-right:12%;
+}
+
+ul .meniu_icons_jos{
+    width:24px;
+}
+.meniu_footer li:last-of-type{
+    margin-right:0;
+}
+.meniu_footer ul li{
+    justify-content: space-evenly;
+    text-align: center;
+    display: list-item;
+}
+
+#meniu_icon_liste{
+    background-image: url(img/meniu_icon_liste_gri_2.svg);
+    background-repeat: no-repeat;    
+    height: 24px;
+}
+.active#meniu_icon_liste{
+    background-image: url(img/meniu_icon_liste_negru_2.svg);
+}
+#meniu_icon_portofoliu{
+    /* background-image: url(img/meniu_icon_portofoliu2.svg); */
+    background-repeat: no-repeat;    
+    height: 24px;
+}
+.active#meniu_icon_portofoliu{
+    background-image: url(img/meniu_icon_portofoliu_negru2.svg);
+}
+#meniu_icon_search{
+    background-image: url(img/meniu_icon_search.svg);
+    background-repeat: no-repeat;    
+    height: 24px;
+}
+.active#meniu_icon_search{
+    background-image: url(img/meniu_icon_search_negru.svg);
+}
+#meniu_icon_chat{
+    background-image: url(img/meniu_icon_chat.svg);
+    background-repeat: no-repeat;    
+    height: 24px;
+}
+.active#meniu_icon_chat{
+    background-image: url(img/meniu_icon_chat_negru.svg);
+}
+#meniu_icon_myaccount{
+    background-image: url(img/meniu_icon_myaccount.svg);
+    background-repeat: no-repeat;    
+    height: 24px;
+}
+.active#meniu_icon_myaccount{
+    background-image: url(img/meniu_icon_myaccount_negru.svg);
+}
+/* END Bara footer*/
+/****************** Meniu ******************/
+
+
+/****************** MBLTable ******************/
+/*folosit in portof, liste, activit, ordine*/
+.MBLTable_Container {
+    width:100%;
+    max-width: 375px;
+    padding: 0 20px;
+    margin: auto;    
+}
+
+.MBLTable_Container td{
+    border: none;
+}
+
+.MBLTable_Container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.MBLTable{
+    padding:10px 0;
+    position: relative;
+    top: 0;
+}
+
+.MBLTableHeader{
+    padding:40px 0 50px 0;
+}
+
+.MBLTableHeader::after{
+    content:' ';
+    display:block;
+    clear:both;
+}
+  
+.MBLTableTitle{
+    font-size: 26px;
+    margin-bottom:-20px;
+    margin-top:-5px;
+    font-weight: 700;
+    float:left;
+}
+
+.MBLTableContextMenu{
+    float:right;
+}
+
+.MBLTableContextMenu_point{
+    background:#6f787e;
+    width:5px;
+    height:5px;
+    border-radius: 60%;
+    margin-bottom:4px;
+}
+
+.MBLTableRow{
+    width: 100%;
+    margin-bottom:5px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between
+  }
+.MBLTableRow li{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    align-items: left;
+    color: #201751;
+    float:left;
+    justify-content: space-evenly;
+    display: table-cell;
+    vertical-align: bottom;
+}
+.MBLTableRow_afterRow{
+    width: 100%;
+    display:block;
+    clear:both;
+    background:#e7e7e7;
+    height:2px;
+    content: '';
+    height: 1px;
+    margin: 10px 0 10px 0;
+    float:none;
+}
+.MBLTableRow_PrimaryData{
+    display: block;
+    height:48px;
+    width: 110px;
+    text-align: left;
+}
+.MBLTableRow_MiddleGraph{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    margin: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #201751;
+    float: left;
+    vertical-align: bottom;
+    overflow: hidden;
+    width: 70px;
+}
+.MBLTableRow_SecondaryData{
+    width: 113px;
+    margin-right: 0;
+    text-align: center;
+    padding-left: 0;      
+}
+
+.MBLTableRow_data{
+    margin-top: -5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color:black;
+    float: none;
+    display: block;
+}
+.MBLTableRow_subtitle{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 17px;
+    /*   letter-spacing: -0.24px; */
+    margin-top:24px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* descriere simbol- de sub nume simbol ( cand e prea lunga)*/
+.nr.MBLTableRow_subtitle.text_gri{
+    width: 100px;
+    white-space: nowrap;
+    overflow-y: scroll;
+    display: block;
+    width: 100%;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+/******************END  MBLTable ******************/
+
+
+
+/****************** Grafice  ******************/
+ .graficInline{
+    width: 100vw;
+    height: 30vh;
+    left: 0px;
+    margin-left: 0px;
+  }
+
+  .grafic_optiuni_tf{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top:10px;
+  }
+
+  .grafic_optiuni_tf li{
+      color:#00c805;
+      text-align:center;
+      font-weight:600;
+      font-size:16px;
+      background:none;
+      justify-content: space-evenly;
+      text-align: center;
+      display: list-item;
+      margin-right:0;
+      width: 16.6%;
+  }
+
+  .grafic_optiunetf_activa{
+    background:#00c805 !important;
+    color:white !important;
+    border-radius:7px !important;
+    padding:13px 0;
+  }
+
+
+  .grafic_optiuni_tf::after{
+    background:#e4e9ed;
+    height:1px;
+  }
+/****************** END Grafice  ******************/
+
+
+
+/****************** Diverse  ******************/
+/* Container Pagini */
+.PaginaIndividuala {
+    padding: 3px;
+    overflow-y: auto;
+    position: relative;
+    top: 80px;
+    bottom: 60px;
+    max-width: 900px;
+}
+.PaginaIndividuala.chestie{
+    margin: auto;
+    width: 100%;
+}
+
+/*mesagerie*/
+.mestdv .text{
+    font-weight: 400;
+}
+.mescli .text{
+    font-weight: 400;
+}
+.mestdv{
+    margin-bottom: 10px;
+}
+
+/*micute*/
+.Hidden{
+    display:none;
+}
+.text_gri{
+    color: #757678;
+    font-weight: 300;
+}
+.GreenButton{
+    background:#00c805 !important;
+    color:white;
+    font-weight: 700;
+    padding:15px 20px;
+    border-radius:50px;
+    display: block;
+    width:50%;
+    margin:auto;
+    outline:none;
+    border: none;
+}
+.GreenButton:focus{
+    outline:none;
+}
+
+.RedButton{
+    background:#db0404 !important;
+    color:white;
+    font-weight: 700;
+    padding:15px 20px;
+    border-radius:50px;
+    display: block;
+    width:50%;
+    margin:auto;
+    outline:none;
+    border: none;
+}
+.RedButton:focus{
+    outline:none;
+}
+/****************** END Diverse  ******************/
+
+
+
+/****************** Meniu Orizontal (ordine, activitate)  ******************/
+.HorizontalSubMenu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    width:100%;
+}
+
+.HorizontalSubMenuItem.selected{
+    border-radius: 50px;
+    border: 2px solid #23cf28;
+    background:#f3fcf4;
+    font-weight: 700;
+    color:#23cf28;
+}
+.HorizontalSubMenuItem {
+    border:2px solid #edf1f3;
+    padding:10px 20px;
+    border-radius: 50px;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: 400;
+}
+.HorizontalSubMenuItem:first-child, .HorizontalSubMenuItem:nth-child(2){
+    margin-right:20px;
+}
+/****************** END Meniu Orizontal (ordine, activitate)  ******************/
+
+
+
+/****************** DATE ref Piata  ******************/
+.StockMarketData{
+    font-size: 17px !important;
+}
+.nr.MBLTableRow_data.denomPrc.StockMarketData.nvr_N, .nr.MBLTableRow_data.denomPrc.StockMarketData.nvr_V{
+    margin-top:15px;
+}
+.rosu, .nvr_R{
+    color:#f35530;
+}
+.verde, .nvr_V{
+    color:#00c805;
+    font-weight: 700;
+}
+
+/*denominari*/
+.denomPrc::after {
+    content: "%";
+}
+.denomRON::after {
+content: "";
+}  
+.denomUSD::after {
+content: "$";
+}
+.denomEUR::after {
+content: "\20AC";
+}
+.denomGBP::after {
+content: "\20A4";
+}
+.denomSEK::after {
+content: "kr";
+}  
+.denomCAD::after {
+content: "$c";
+}    
+.denomPLN::after {
+content: "zł";
+}      
+.denomACT::after {
+    content: " actiuni";
+  }
+/****************** END DATE ref Piata  ******************/
+
+
+/****************** Meniu cu overlay  ******************/
+.MenuWithOverlay{
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4); 
+    z-index: 10; 
+    cursor: pointer;
+    text-align: center;
+}
+.lista_overlay ul li span{
+    display:block;
+    width:100%;
+    margin:auto;
+    padding:20px 0 20px 20px;
+    text-align: left;
+    float:left;
+}
+.lista_overlay .MBLTableTitle{
+    padding: 20px 0 20px 0;
+    font-size: 26px;
+    margin:0;
+    text-align: center;
+    float:none;
+}
+.lista_overlay{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    background: white;
+    padding: 20px 0;
+}
+.linie{
+    margin: auto;
+    width: 90%;
+    height: 1px;
+    background: #e4e9ed;
+    display: block;
+    clear: both;
+
+}
+.check_verde{
+    top: 20px;
+    background-image: url(img/check_verde.svg);
+    background-repeat: no-repeat;
+    height: 20px;
+    position: relative;
+    left: 85%;
+}
+.delete-icon, .edit-icon{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat; 
+    position: relative;
+    left: 85%;
+    top: 14px;
+}
+
+.delete-icon{
+    background-image: url(img/delete.svg);  
+}
+.edit-icon{
+    background-image: url(img/edit.svg);
+    top: 7px;
+}
+/****************** END Meniu cu overlay  ******************/
+
+
+
+/****************** Dialog Confirmare  ******************/
+.dialog_confirmare{
+    background: white;
+    border-radius:6px;
+    padding:40px 30px;
+    color:black;
+    z-index: 500;
+    width: 92vw;
+    height: auto;
+    margin: 23vh auto 10vh;
+}
+.dialog_confirmare_subt{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    display:block;width:100%;
+    margin-bottom: 20px;
+}
+.dialog_confirmare_btn{
+    font-weight: 400;
+    color:#00c805;
+    display:block;
+    width:100%;
+    background:none;
+    outline:none;
+    border:none;
+    margin-top:20px;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+.dialog_confirmare_btn:focus{
+    outline:none;
+}
+.continua{
+    background:#00c805;
+    color:white;
+    font-weight: 700;
+    padding:15px 20px;
+    border-radius:50px;
+    display: block;
+    margin:25px auto 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.dialog_confirmare_input{
+    width:100%;
+    outline:none;
+    height:40px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border:2px solid #edf1f3;
+    padding: 0 20px;
+    font-weight: 400;
+}
+.dialog_confirmare_input:focus, input:focus{
+    outline:none;
+}
+/****************** END Dialog Confirmare  ******************/
+
+.nu-ir{
+    display:block;
+}
+.da-ir{
+    display:none !important;
+}
+
+.Lista_header_stg .MBLTableRow_data.lista_format{
+    margin-top: 8px;
+}
+
+.MBLTable .MBLTableRow_SecondaryData .StockMarketData{
+    margin-top:15px;
+}
+.MBLTable .MBLTableRow .MBLTableRow_PrimaryData .MBLTableRow_data.lksim{
+    margin-top:8px;
+}
+
+
+/* afisare desktop */
+@media (min-width: 480px){
+    #fixed_meniu_header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 440px;
+    margin: auto;
+    max-width: 100%;
+    z-index: 10000;
+    box-shadow: 0px 15px 10px -15px #11111121;
+    }
+    .PaginaIndividuala {
+        max-width: 400px;
+    }
+    #fixed_meniu_footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 440px;
+        margin: auto;
+        max-width: 100%;
+        z-index: 10000;
+        box-shadow: 0px -15px 10px -15px #11111121;
+        height: 60px;
+        padding: 20px 30px;
+        text-align: center;
+        background: #fff;
+        z-index: 3;
+    }
+    .lista_overlay{
+        bottom: 30%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 440px;
+        margin: auto;
+        max-width: 100%;
+        z-index: 10000;
+    }
+    .MenuWithOverlay{
+        z-index: 20000;
+    }
+    .dialog_confirmare{
+        width:380px;
+    }
+    .graficInline{
+        width: calc(100% + 40px);
+    }
+
+}
+
+
+
+
+
+
+
+
